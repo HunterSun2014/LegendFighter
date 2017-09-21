@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>a6319d32-1bb2-410b-bb4e-845e02b8bf02</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>ee55ad1d-f7d5-424d-81f2-5c89c0c14100</UniqueIdentifier>
+      <Extensions>bmp;fbx;gif;jpg;jpeg;tga;tiff;tif;png</Extensions>
+    </Filter>
+    <Filter Include="Content">
+      <UniqueIdentifier>b2ff9fee-b198-4cc6-930a-f730a38ad08e</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="Common\DirectXHelper.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\StepTimer.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\DeviceResources.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClCompile Include="Common\DeviceResources.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClInclude Include="Content\Sample3DSceneRenderer.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="Content\SampleFpsTextRenderer.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="Content\ShaderStructures.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClCompile Include="Content\Sample3DSceneRenderer.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="Content\SampleFpsTextRenderer.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <FxCompile Include="Content\SamplePixelShader.hlsl">
+      <Filter>Content</Filter>
+    </FxCompile>
+    <FxCompile Include="Content\SampleVertexShader.hlsl">
+      <Filter>Content</Filter>
+    </FxCompile>
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Filter Include="Assets\JavaScript">
+      <UniqueIdentifier>{60c99dc2-4ab0-473e-8a49-a1a8aebb795b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Soldier">
+      <UniqueIdentifier>{1c9e9f8f-80be-46c6-a4bf-7bb205465d59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Warrior">
+      <UniqueIdentifier>{fbdc67a3-21c4-4167-a8f0-34dd82f60d11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Blanka">
+      <UniqueIdentifier>{97f2df82-2369-4f79-9fd0-f18b2d0f5fd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\WalkingGirl">
+      <UniqueIdentifier>{de8710da-ec0c-4339-825d-00398886046c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Ryu">
+      <UniqueIdentifier>{e0c1a9d2-b1eb-4719-a4ef-5441b0334a98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{c566e89f-22e4-4e02-b36a-2eb6d04186dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Audio">
+      <UniqueIdentifier>{08f0e2bf-f126-4df3-b612-d60a3652532a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities">
+      <UniqueIdentifier>{86922ad0-0d0c-474d-9166-ac047997de5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Audio">
+      <UniqueIdentifier>{6aab2ca5-3d6d-4191-aeff-2a597184e2b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\GirlWarrior">
+      <UniqueIdentifier>{a94506c6-2857-4a3a-bd2b-6e5398e2c642}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Zeph">
+      <UniqueIdentifier>{34732616-0342-4489-947d-c0720f238b07}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="App.cpp" />
+    <ClCompile Include="LegendFighterMain.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Content\Actor.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="Content\Character.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="Content\CollisionHelper.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="Content\EntityManager.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="Content\jsrt-wrappers.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="Content\ScriptedStateMachine.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveLookController.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Log.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="App.h" />
+    <ClInclude Include="LegendFighterMain.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Content\actor.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="Content\Character.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="Content\Collision.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="Content\CollisionHelper.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="Content\EntityManager.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="Content\jsrt-wrappers.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="Content\ScriptedStateMachine.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveLookController.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Log.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Soldier\head_diff.dds">
+      <Filter>Assets\Soldier</Filter>
+    </Image>
+    <Image Include="Assets\Soldier\head_norm.dds">
+      <Filter>Assets\Soldier</Filter>
+    </Image>
+    <Image Include="Assets\Soldier\jacket_diff.dds">
+      <Filter>Assets\Soldier</Filter>
+    </Image>
+    <Image Include="Assets\Soldier\jacket_norm.dds">
+      <Filter>Assets\Soldier</Filter>
+    </Image>
+    <Image Include="Assets\Soldier\pants_diff.dds">
+      <Filter>Assets\Soldier</Filter>
+    </Image>
+    <Image Include="Assets\Soldier\pants_norm.dds">
+      <Filter>Assets\Soldier</Filter>
+    </Image>
+    <Image Include="Assets\Soldier\upBody_diff.dds">
+      <Filter>Assets\Soldier</Filter>
+    </Image>
+    <Image Include="Assets\Soldier\upbody_norm.dds">
+      <Filter>Assets\Soldier</Filter>
+    </Image>
+    <Image Include="Assets\Warrior\Fan_Diff.dds">
+      <Filter>Assets\Warrior</Filter>
+    </Image>
+    <Image Include="Assets\Warrior\Frame_Diff.dds">
+      <Filter>Assets\Warrior</Filter>
+    </Image>
+    <Image Include="Assets\Warrior\Ground_Diff.dds">
+      <Filter>Assets\Warrior</Filter>
+    </Image>
+    <Image Include="Assets\layingrock.dds">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\sky_cube.dds">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Blanka\00000002#infuser#00077744.DDS">
+      <Filter>Assets\Blanka</Filter>
+    </Image>
+    <Image Include="Assets\Blanka\00000003#infuser#00427440.DDS">
+      <Filter>Assets\Blanka</Filter>
+    </Image>
+    <Image Include="Assets\Blanka\00000004#infuser#00777136.DDS">
+      <Filter>Assets\Blanka</Filter>
+    </Image>
+    <Image Include="Assets\Blanka\00000005#infuser#01126832.DDS">
+      <Filter>Assets\Blanka</Filter>
+    </Image>
+    <Image Include="Assets\WalkingGirl\SS_002_01_body_DM.dds">
+      <Filter>Assets\WalkingGirl</Filter>
+    </Image>
+    <Image Include="Assets\WalkingGirl\SS_002_02_acce_DM.dds">
+      <Filter>Assets\WalkingGirl</Filter>
+    </Image>
+    <Image Include="Assets\WalkingGirl\SS_002_eye_DM.dds">
+      <Filter>Assets\WalkingGirl</Filter>
+    </Image>
+    <Image Include="Assets\WalkingGirl\SS_002_head_DM.dds">
+      <Filter>Assets\WalkingGirl</Filter>
+    </Image>
+    <Image Include="Assets\Ryu\85ed6e0.dds">
+      <Filter>Assets\Ryu</Filter>
+    </Image>
+    <Image Include="Assets\Ryu\86eeac0.dds">
+      <Filter>Assets\Ryu</Filter>
+    </Image>
+    <Image Include="Assets\Ryu\8698d80.dds">
+      <Filter>Assets\Ryu</Filter>
+    </Image>
+    <Image Include="Assets\Ryu\8643040.dds">
+      <Filter>Assets\Ryu</Filter>
+    </Image>
+    <Image Include="Assets\GirlWarrior\dunjian_d.dds">
+      <Filter>Assets\GirlWarrior</Filter>
+    </Image>
+    <Image Include="Assets\GirlWarrior\dunjian_n.dds">
+      <Filter>Assets\GirlWarrior</Filter>
+    </Image>
+    <Image Include="Assets\GirlWarrior\dunjian_s.dds">
+      <Filter>Assets\GirlWarrior</Filter>
+    </Image>
+    <Image Include="Assets\GirlWarrior\nvzhanshidi_d.dds">
+      <Filter>Assets\GirlWarrior</Filter>
+    </Image>
+    <Image Include="Assets\GirlWarrior\nvzhanshidi_n2.dds">
+      <Filter>Assets\GirlWarrior</Filter>
+    </Image>
+    <Image Include="Assets\GirlWarrior\nvzhanshidi_s1.dds">
+      <Filter>Assets\GirlWarrior</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LegendFighter_TemporaryKey.pfx" />
+    <None Include="Assets\Soldier\soldier.sdkmesh">
+      <Filter>Assets\Soldier</Filter>
+    </None>
+    <None Include="Assets\Soldier\soldier.sdkmesh_anim">
+      <Filter>Assets\Soldier</Filter>
+    </None>
+    <None Include="Assets\Warrior\Fan.sdkmesh">
+      <Filter>Assets\Warrior</Filter>
+    </None>
+    <None Include="Assets\Warrior\windmillstage.sdkmesh">
+      <Filter>Assets\Warrior</Filter>
+    </None>
+    <None Include="Assets\Blanka\BLANKA.sdkmesh_anim">
+      <Filter>Assets\Blanka</Filter>
+    </None>
+    <None Include="Assets\Blanka\BLANKA.sdkmesh">
+      <Filter>Assets\Blanka</Filter>
+    </None>
+    <None Include="Assets\WalkingGirl\WalkingGirl.sdkmesh">
+      <Filter>Assets\WalkingGirl</Filter>
+    </None>
+    <None Include="Assets\WalkingGirl\WalkingGirl.sdkmesh_anim">
+      <Filter>Assets\WalkingGirl</Filter>
+    </None>
+    <None Include="Assets\JavaScript\sence.js">
+      <Filter>Assets\JavaScript</Filter>
+    </None>
+    <None Include="Assets\Ryu\Ryu.sdkmesh">
+      <Filter>Assets\Ryu</Filter>
+    </None>
+    <None Include="Assets\Ryu\Ryu.sdkmesh_anim">
+      <Filter>Assets\Ryu</Filter>
+    </None>
+    <None Include="Assets\GirlWarrior\GirlWarrior.sdkmesh">
+      <Filter>Assets\GirlWarrior</Filter>
+    </None>
+    <None Include="Assets\GirlWarrior\GirlWarrior.sdkmesh_anim">
+      <Filter>Assets\GirlWarrior</Filter>
+    </None>
+    <None Include="Assets\JavaScript\Level01.js">
+      <Filter>Assets\JavaScript</Filter>
+    </None>
+    <None Include="..\Readme.docx" />
+  </ItemGroup>
+  <ItemGroup>
+    <MeshContentTask Include="Assets\fy4.FBX">
+      <Filter>Assets</Filter>
+    </MeshContentTask>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\Audio\Ryu_Shoryuken.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\Ryu_SpinKick.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+  </ItemGroup>
+</Project>

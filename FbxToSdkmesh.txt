@@ -1,0 +1,90 @@
+1.导出，绑定位置计算
+ bool ParseMeshSkinning( FbxMesh* pMesh, SkinData* pSkinData )
+ {
+ 		FbxMatrix matBindPose = matXBindPose.Inverse() * matReferenceGlobalInitPosition;
+ }
+ 
+2.导出，绑定矩阵不再乘父矩阵的逆矩阵， 27行
+XMMATRIX ParseTransform( FbxNode* pNode, ExportFrame* pFrame, CXMMATRIX matParentWorld, const bool bWarnings = true )
+{
+    XMMATRIX matWorld;
+    XMMATRIX matLocal;
+    bool bProcessDefaultTransform = true;
+
+    if( !g_BindPoseMap.empty() )
+    {
+				const char * name = pNode->GetName();
+        PoseMap::iterator iter = g_BindPoseMap.find( pNode );
+        if( iter != g_BindPoseMap.end() )
+        {
+            FbxMatrix PoseMatrix = iter->second;
+            matWorld = ConvertMatrix( PoseMatrix );
+            
+						XMMATRIX matInvParentWorld = XMMatrixInverse( nullptr, matParentWorld );
+            matLocal = XMMatrixMultiply( matWorld, matInvParentWorld);
+           
+						//bind pose matrix don't multiply the inverse matrix of parent's matirx
+						matLocal = matWorld;
+						bProcessDefaultTransform = false;
+        }
+    }
+    
+    ......
+}
+
+3.sdkmes绘制，不再乘父矩阵 47行
+void  Model::TransformBindPoseFrame(UINT iFrame, CXMMATRIX ParentWorld)
+{
+
+	// Transform ourselves
+	XMMATRIX  LocalWorld = XMLoadFloat4x4(&frames[iFrame]->Matrix);
+	
+#ifdef _DEBUG
+	XMVECTOR scale, rot, trans;
+	XMMatrixDecompose(&scale, &rot, &trans, LocalWorld);
+#endif 
+	
+	//LocalWorld *= ParentWorld;
+	XMStoreFloat4x4(&frames[iFrame]->mBindPoseFrameMatrix, LocalWorld);
+
+	// Transform our siblings
+	if (frames[iFrame]->SiblingFrame != INVALID_FRAME)
+		TransformBindPoseFrame(frames[iFrame]->SiblingFrame, ParentWorld);
+
+	// Transform our children
+	if (frames[iFrame]->ChildFrame != INVALID_FRAME)
+		TransformBindPoseFrame(frames[iFrame]->ChildFrame, LocalWorld);
+
+}
+
+4. sdkmes绘制， 不再计算逆矩阵， 79行
+void  Model::TransformMesh(CXMMATRIX World, double fTime)
+{
+	if (currentAnim == UINT(-1))
+		return;
+
+	auto & anim = animations[currentAnim];
+
+	if (FTT_RELATIVE == anim->frameTransformType)
+	{
+		TransformFrame(0, World, fTime);
+
+		// For each frame, move the transform to the bind pose, then
+		// move it to the final position
+		for (UINT i = 0; i < frames.size(); i++)
+		{
+			XMMATRIX BindPosMat = XMLoadFloat4x4(&frames[i]->mBindPoseFrameMatrix);
+			XMMATRIX TransfromedPosMat = XMLoadFloat4x4(&frames[i]->mTransformedPoseFrameMatrix);
+
+			//XMMATRIX mFinal = XMMatrixInverse(NULL, BindPosMat) * TransfromedPosMat;
+			XMMATRIX mFinal = BindPosMat * TransfromedPosMat;
+
+			XMStoreFloat4x4(&frames[i]->mTransformedPoseFrameMatrix, mFinal);
+		}
+	}
+	else if (FTT_ABSOLUTE == anim->frameTransformType)
+	{
+		for (UINT i = 0; i < frames.size(); i++)
+			TransformFrameAbsolute(i, fTime);
+	}
+}
