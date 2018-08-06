@@ -4,3 +4,5 @@
 3. Skin mesh animation 
 
 ![alt text](https://github.com/HunterSun2014/LegendFighter/blob/master/Legend/wp_ss_20170224_0001.png)
+![alt text](https://github.com/HunterSun2014/LegendFighter/blob/master/Legend/wp_ss_20170224_0003.png)
+![alt text](https://github.com/HunterSun2014/LegendFighter/blob/master/Legend/wp_ss_20170224_0007.png)
